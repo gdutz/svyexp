@@ -1,7 +1,7 @@
 Package: svyexp
 Type: Package
 Title: Tools for Exploring and Analysing Survey Data in R
-Version: 0.0.0.9001
+Version: 0.0.0.9002
 Author: Gregor Dutz
 Maintainer: Gregor Dutz <gregor.dutz@gmail.com>
 Description: The aim of this package is to provide easy-to-use tools for
