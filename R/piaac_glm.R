@@ -67,7 +67,7 @@ piaac_glm <- function(datapath, countries, variables, formula, FUN = piaac_tidy,
             data = mitools::imputationList(d.temp),
             mse = TRUE)
 
-        results[[countries[[i]]]] <- with(sd, svyglm(formula))
+        results[[countries[[i]]]] <- with(sd, survey::svyglm(formula))
         setTxtProgressBar(pb, i)
         rm(d.temp, jk.method, i, sd, j, pv.non, lit)
     }
