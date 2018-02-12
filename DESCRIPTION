@@ -1,0 +1,22 @@
+Package: svyexp
+Type: Package
+Title: Tools for Exploring and Analysing Survey Data in R
+Version: 0.0.0.9000
+Author: Gregor Dutz
+Maintainer: Gregor Dutz <gregor.dutz@gmail.com>
+Description: The aim of this package is to provide easy-to-use tools for
+    exploring and analysing data from complex surveys. In building on top of the
+    packages survey and mitools, it allows to handle complex survey design with 
+    replicate weights, as well as multiple imputations, also known as plausible 
+    values in the context of assessment studies like PISA or PIAAC. The 
+    package's goal is to replicate the functionality of tools like IDBAnalyzer
+    or OECD's International Data Explorer (IDB). Please check the README for the
+    currently implemented features.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    survey (>= 3.32),
+    mitools (>= 2.2),
+    haven (>= 1.1)
+RoxygenNote: 6.0.1
