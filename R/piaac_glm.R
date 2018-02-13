@@ -5,7 +5,7 @@
 #' @param variables Vector with variable names.
 #' @param formula Formula for the linear model.
 #' @param FUN Function name for data tidying.
-#' @param ... Any parameters forwarded to FUN.
+#' @param ... Other Arguments passed to FUN or survey::svyglm.
 #'
 #' @return List of regression results. Individual list elements are to be handled with mitools.
 #' @export
@@ -67,7 +67,7 @@ piaac_glm <- function(datapath, countries, variables, formula, FUN = piaac_tidy,
             data = mitools::imputationList(d.temp),
             mse = TRUE)
 
-        results[[countries[[i]]]] <- with(sd, survey::svyglm(formula))
+        results[[countries[[i]]]] <- with(sd, survey::svyglm(formula, ...))
         setTxtProgressBar(pb, i)
         rm(d.temp, jk.method, i, sd, j, pv.non, lit)
     }
