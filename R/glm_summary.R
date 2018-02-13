@@ -10,8 +10,8 @@
 #' @examples
 #' glm_summary(mitools::MIcombine(results$deu))   # Results for German dataset
 #' glm_summary(mitools::MIcombine(results[[2]]))  # Results for second dataset
-glm_summary <- function(object, ..., print = TRUE){
-    out             <-data.frame(results=coef(object), se=sqrt(diag(vcov(object))))
+glm_summary <- function(object,... , print = TRUE){
+    out             <- data.frame(results=coef(object), se=sqrt(diag(vcov(object))))
     t <- coef(object)/(sqrt(diag(vcov(object))))
     out$"t value"   <- t
     p <- 2*pt(-abs(t), object$df)
