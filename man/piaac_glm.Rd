@@ -4,7 +4,8 @@
 \alias{piaac_glm}
 \title{Linear Regression with PIAAC data}
 \usage{
-piaac_glm(datapath, countries, variables, formula, FUN = piaac_tidy, ...)
+piaac_glm(datapath, countries, variables, formula, pv = NULL,
+  FUN = piaac_tidy, ...)
 }
 \arguments{
 \item{datapath}{Path to the PIAAC data. A string.}
@@ -15,9 +16,11 @@ piaac_glm(datapath, countries, variables, formula, FUN = piaac_tidy, ...)
 
 \item{formula}{Formula for the linear model.}
 
+\item{pv}{One of "pvlit", "pvnum", "pvpsl" or none.}
+
 \item{FUN}{Function name for data tidying.}
 
-\item{...}{Any parameters forwarded to FUN.}
+\item{...}{Other Arguments passed to FUN or survey::svyglm.}
 }
 \value{
 List of regression results. Individual list elements are to be handled with mitools.
