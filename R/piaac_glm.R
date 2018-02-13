@@ -24,7 +24,7 @@ piaac_glm <- function(datapath, countries, variables, formula, FUN = piaac_tidy,
         d <- piaac_read(datapath, countries[[i]])
 
         names(d) <- tolower(names(d))
-        d <- select(d, one_of(variables), cntryid, vemethod, contains("pvlit"), contains("spfwt"))
+        d <- dplyr::select(d, dplyr::one_of(variables), cntryid, vemethod, dplyr::contains("pvlit"), dplyr::contains("spfwt"))
 
         d <- FUN(d, variables, ...) # call function for data tidying
 
